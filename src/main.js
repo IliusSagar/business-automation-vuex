@@ -1,4 +1,15 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import store from './store'
+import router from './router';
 
-createApp(App).mount('#app')
+// Create the app instance
+const app = createApp(App);
+
+// Use the Vuex store
+app.use(store);
+
+app.use(router);
+
+// Mount the app
+app.mount('#app');
